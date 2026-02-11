@@ -2,8 +2,13 @@ name: Node CI/CD
 
 on:
   push:
+    branches:
+      - main
+      - develop
   pull_request:
-
+    branches:
+      - main
+      - develop
 jobs:
   ci:
     runs-on: ubuntu-latest
