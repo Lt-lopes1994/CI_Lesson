@@ -6,7 +6,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Node 20.X
         uses: actions/setup-node@v4
@@ -21,7 +21,7 @@ jobs:
         run: npm test
 
       - name: Build project
-        run: npm run 
+        run: npm run build
         
       - name: Docker Build & Push (main branch only)
         if: github.ref == 'refs/heads/main'
